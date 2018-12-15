@@ -13,7 +13,7 @@ namespace helloworld
 
             int number1, number2;
 
-            Console.WriteLine("We're going to be adding two numbers within 10. Press any key to confirm." + (number1 + number2));
+            Console.WriteLine("We're going to be adding two numbers within 10. Press any key to confirm." );
 
             Console.ReadKey();
 
@@ -22,8 +22,7 @@ namespace helloworld
 
             if (number1 > 10)
                 Console.WriteLine("Hey! The number should be 10 or less:");
-            else
-                if (number1 > 0)
+            else if (number1 < 0)
                 Console.WriteLine("Hey! The number should be 0 or more!");
             else
                 Console.WriteLine("Well done!");
@@ -34,8 +33,7 @@ namespace helloworld
 
             if (number2 > 10)
                 Console.WriteLine("Hey! The number should be 10 or less:");
-            else
-                if (number2 > 0)
+            else if (number2 < 0)
                 Console.WriteLine("Hey! The number should be 0 or more!");
             else
                 Console.WriteLine("Well done!");
