@@ -12,31 +12,47 @@ namespace helloworld
         {
 
             int number1, number2;
-
-            Console.WriteLine("We're going to be adding two numbers within 10. Press any key to confirm." );
+            bool itisokaytocontinue = false;
+            Console.WriteLine("We're going to be adding two numbers within 10. Press enter to confirm." );
 
             Console.ReadKey();
+            while (itisokaytocontinue != true )
+            { 
+                Console.WriteLine("Please enter a number between 1 and 10.");
+                number1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter a number between 1 and 10:");
-            number1 = int.Parse(Console.ReadLine());
+                if (number1 > 10)
+        
+                    Console.WriteLine("Hey! The number should be 10 or less:");
+                
+                else if (number1 < 1)
+                    Console.WriteLine("Hey! The number should be 1 or more!");
+                else
+                {
+                    itisokaytocontinue = true;
+                    Console.WriteLine("Well done!");
+                }
 
-            if (number1 > 10)
-                Console.WriteLine("Hey! The number should be 10 or less:");
-            else if (number1 < 0)
-                Console.WriteLine("Hey! The number should be 0 or more!");
-            else
-                Console.WriteLine("Well done!");
+            }
 
-            Console.WriteLine("Thank you. One more:");
+            itisokaytocontinue = false;
+            while (itisokaytocontinue != true)
+            {
+                Console.WriteLine("Thank you. One more:");
 
-            number2 = int.Parse(Console.ReadLine());
+                number2 = int.Parse(Console.ReadLine());
 
-            if (number2 > 10)
-                Console.WriteLine("Hey! The number should be 10 or less:");
-            else if (number2 < 0)
-                Console.WriteLine("Hey! The number should be 0 or more!");
-            else
-                Console.WriteLine("Well done!");
+                if (number2 > 10)
+                    Console.WriteLine("Hey! The number should be 10 or less:");
+                else if (number2 < 1)
+                    Console.WriteLine("Hey! The number should be 1 or more!");
+                else
+                {
+                    itisokaytocontinue = true;
+                        Console.WriteLine("Well done!"); }
+            }
+               
+            
 
             Console.ReadKey();
             
